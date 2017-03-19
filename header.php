@@ -8,6 +8,11 @@
  * @since FoundationPress 1.0.0
  */
 
+
+/**
+ * Next Steps: layout of the header main nav
+ */
+
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -43,7 +48,7 @@
             <button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
         </div>
 
-        <nav id="site-navigation" class="main-navigation top-bar" role="navigation">
+        <div class="top-bar">
             <div class="top-bar-left">
                 <div class="menu">
                     <h1 class="header-logo"><span class="show-for-sr"><?php bloginfo( 'name' ); ?></span>
@@ -55,12 +60,14 @@
                 </div>
             </div>
             <div class="top-bar-right">
-                <?php foundationpress_top_bar_r(); ?>
-
                 <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
                     <?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
                 <?php endif; ?>
             </div>
+        </div>
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <!--  -->
+            <?php foundationpress_top_bar_r(); ?>
         </nav>
     </header>
 
