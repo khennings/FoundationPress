@@ -14,7 +14,7 @@ var cleanCSS    = require('gulp-clean-css');
 
 // Enter URL of your local server here
 // Example: 'http://localwebsite.dev'
-var URL = '';
+var URL = 'http://localhost';
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -58,8 +58,6 @@ var PATHS = {
     'assets/components/foundation-sites/js/foundation.tabs.js',
     'assets/components/foundation-sites/js/foundation.toggler.js',
     'assets/components/foundation-sites/js/foundation.tooltip.js',
-    'assets/components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js',
-
 
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',

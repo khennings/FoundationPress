@@ -6,3 +6,17 @@
   border-radius: 3px;
   border: none;
 }
+
+.woocommerce {
+	a {
+		&.button {
+			background: $red;
+			color: $white;
+			border-radius: 0;
+			&:hover {
+				background: darken($red, 10%);
+				color: $white;
+			}
+		}
+	}
+}

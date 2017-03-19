@@ -1,0 +1,19 @@
+
+
+.header-logo {
+	max-width: 130px;
+	margin: 0;
+	@include breakpoint(medium) {
+		max-width: 150px;
+	}
+}
+
+.title-bar-title {
+	margin-right: auto;
+}
+
+.title-bar {
+	.menu-icon {
+		margin-left: rem-calc(10);
+	}
+}
