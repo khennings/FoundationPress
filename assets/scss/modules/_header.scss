@@ -33,5 +33,7 @@
 .menu > li {
 	flex-basis: (1 / 7) * 100%;
 	text-align: center;
-
+	> a {
+		justify-content: center;
+	}
 }
