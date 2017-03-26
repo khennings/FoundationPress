@@ -53,3 +53,6 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+
+// remove default sorting dropdown
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
