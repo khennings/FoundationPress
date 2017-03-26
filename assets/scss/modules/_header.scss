@@ -17,3 +17,21 @@
 		margin-left: rem-calc(10);
 	}
 }
+
+.desktop-menu {
+	max-width: 75rem;
+	margin: 0 auto;
+	font-size: rem-calc(12);
+	@include breakpoint(medium) {
+		font-size: rem-calc(14);	
+	}
+	@include breakpoint(large) {
+		font-size: $global-font-size;
+	}
+}
+
+.menu > li {
+	flex-basis: (1 / 7) * 100%;
+	text-align: center;
+
+}
