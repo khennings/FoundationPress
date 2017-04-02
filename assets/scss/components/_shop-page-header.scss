@@ -1,0 +1,26 @@
+.shop-page-header {
+	position: relative;
+	img {
+		display: block;
+	}
+}
+
+.shop-page-header__text {
+	position: absolute;
+	bottom: 0;
+	left:0;
+	right: 0;
+	text-align: center;
+	background: rgba($white, .9);
+	padding: rem-calc(20) rem-calc(15);
+	p {
+		margin-bottom: 0;
+	}
+	@include breakpoint(medium) {
+		padding: rem-calc(40) rem-calc(15);
+	}
+	h1 {
+		color: $red;
+	}
+}
+

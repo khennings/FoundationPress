@@ -56,3 +56,5 @@ require_once( 'library/responsive-images.php' );
 
 // remove default sorting dropdown
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+add_theme_support( 'post-thumbnails' );

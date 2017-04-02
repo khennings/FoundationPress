@@ -1,4 +1,6 @@
-
+.top-bar {
+	@include flex-grid-row();
+}
 
 .header-logo {
 	max-width: 130px;

@@ -3,13 +3,17 @@
 		&.products {
 			li{
 				&.product {
+					text-align: center;					
+					@media screen and (max-width: 400px) {
+						float: none;
+						width: 100%;
+					}
 					h3 {
-						font-size: 1.5em;
+						font-size: 1.7em;
 					}
 					.price {
 						color: $black;
 						font-weight: $global-weight-bold;
-						// testing
 					}
 				}
 			}

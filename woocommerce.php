@@ -12,8 +12,8 @@ get_header(); ?>
 
 	<div class="small-12 columns" role="main">
 	<?php do_action( 'foundationpress_before_content' ); ?>
-
 	<?php while ( woocommerce_content() ) : the_post(); ?>
+	
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
