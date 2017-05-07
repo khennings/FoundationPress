@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="row">
+<div class="row white-back">
 
 	<div class="small-12 columns" role="main">
 	<?php do_action( 'foundationpress_before_content' ); ?>

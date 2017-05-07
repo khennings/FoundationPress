@@ -1,5 +1,13 @@
-.off-canvas-wrapper {
+.container {
 	background: url('images/dots-background.png') repeat 0 0;
+}
+
+@mixin white-back {
+	background: rgba(255,255,255,.8);
+}
+
+.white-back, #page {
+	@include white-back;
 }
 
 .woocommerce {
@@ -23,4 +31,27 @@
 			}
 		}
 	}
+	a.remove {
+		color: $red !important;
+		&:hover {
+			background: $red;
+		}
+	}
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background-color: $red;
+}
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+	width: 100%;
+	float: none;
+}
+
+h1, h2, h3 {
+	color: $red;
 }

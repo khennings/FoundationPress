@@ -1,6 +1,6 @@
 #page {
   @include grid-row();
-  margin-top: 3rem;
+  padding-top: 3rem;
 
   .main-content {
     @include breakpoint(small) {
@@ -9,6 +9,8 @@
 
     @include breakpoint(medium) {
       @include grid-column(8);
+      float: none;
+      margin: 0 auto;
     }
   }
 }
