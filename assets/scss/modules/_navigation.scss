@@ -16,6 +16,10 @@
   @include hide-for(medium);
 }
 
+.title-bar {
+  border-bottom: 5px solid $black;
+}
+
 // Mobile menu
 .off-canvas {
   > ul.menu {
@@ -75,7 +79,7 @@
     line-height: 1;
 
     &:hover:not(.button) {
-      background-color: #42525D;
+      background-color: transparent;
     }
   }
 

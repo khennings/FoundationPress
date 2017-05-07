@@ -38,7 +38,8 @@
             <div class="title-bar-title">
                 <h1 class="header-logo"><span class="show-for-sr"><?php bloginfo( 'name' ); ?></span>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img src="http://placehold.it/350x150">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" />
+                        
                         <!-- TODO: make this content editable? -->
                     </a>
                 </h1>
@@ -53,7 +54,7 @@
                 <div class="menu">
                     <h1 class="header-logo"><span class="show-for-sr"><?php bloginfo( 'name' ); ?></span>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <img src="http://placehold.it/350x150">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" />
                             <!-- TODO: make this content editable? -->
                         </a>
                     </h1>
