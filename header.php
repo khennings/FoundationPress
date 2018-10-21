@@ -45,11 +45,11 @@
                 </h1>
             </div>
             <!-- TODO: make this link a variable to the shop link. Don't really want this hard-coded -->
-            <a href="wordpress/shop" class="button">Shop Online</a>
+            <a style="margin-bottom: 0;" href="wordpress/shop" class="button">Shop Online</a>
             <button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
         </div>
 
-        <div class="top-bar">
+        <div class="top-bar show-for-medium">
             <div class="top-bar-left">
                 <div class="menu">
                     <h1 class="header-logo"><span class="show-for-sr"><?php bloginfo( 'name' ); ?></span>
@@ -61,6 +61,15 @@
                 </div>
             </div>
             <div class="top-bar-right">
+                <?php if ( is_user_logged_in() ) { ?>
+                    <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><?php _e('My Account','woothemes'); ?></a>
+                    <a href="/my-account/customer-logout">Log Out</a>
+
+                 <?php } 
+                 else { ?>
+                    <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><?php _e('Login / Register','woothemes'); ?></a>
+                 <?php } ?>
+
                 <!-- Shopping Cart Desktop -->
                 <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
                  
