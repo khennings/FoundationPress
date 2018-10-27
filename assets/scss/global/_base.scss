@@ -72,18 +72,21 @@ h1, h2, h3 {
 }
 
 .cart-contents {
+	padding: 0 0 0 1.5rem;
 	&, .login-reg & {
-		padding: 0 1rem 0 1.5rem;
 		background: transparent;
 		position: relative;
 		z-index: 1;
+	}
+	.login-reg & {
+		padding: 0 1rem 0 1.5rem;
 	}
 }
 
 .cart-icon {
 	position: absolute;
 	left: 0;
-	top: 1px;
+	top: 3px;
 		.off-canvas & {
 			top: 6px;
 		}	

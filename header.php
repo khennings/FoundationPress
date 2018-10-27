@@ -64,13 +64,7 @@
                 <?php if ( is_user_logged_in() ) { ?>
                     <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><?php _e('My Account','woothemes'); ?></a> / 
                     <a href="/my-account/customer-logout">Log Out</a>
-
-                 <?php } 
-                 else { ?>
-                    <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><?php _e('Login / Register','woothemes'); ?></a>
-                 <?php } ?>
-
-                <!-- Shopping Cart Desktop -->
+                                    <!-- Shopping Cart Desktop -->
                 <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
                  
                     $count = WC()->cart->cart_contents_count;
@@ -91,6 +85,13 @@
                     </span>
                  
                 <?php } ?>
+
+                 <?php } 
+                 else { ?>
+                    <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><?php _e('Login / Register','woothemes'); ?></a>
+                 <?php } ?>
+
+
                 <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
                     <?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
                 <?php endif; ?>
