@@ -65,21 +65,33 @@ h1, h2, h3 {
 
 .cart-icon-wrapper {
 	position: relative;
+	display: inline-block;
+	.login-reg & {
+		margin-left: 1rem;
+	}
 }
 
 .cart-contents {
-	padding-left: 1.5rem;
-	background: transparent;
-	position: relative;
-	z-index: 1;
+	&, .login-reg & {
+		padding: 0 1rem 0 1.5rem;
+		background: transparent;
+		position: relative;
+		z-index: 1;
+	}
 }
 
 .cart-icon {
 	position: absolute;
 	left: 0;
 	top: 1px;
-	&:before {
+		.off-canvas & {
+			top: 6px;
+		}	
+		&:before {
 		background-image: url(../images/shopping-cart.svg);
+		.off-canvas & {
+			background-image: url(../images/shopping-cart-white.svg);
+		}
 		content: '';
 		height: rem-calc(17);
 		width: rem-calc(17);
