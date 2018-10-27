@@ -109,8 +109,9 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: "Ruge Boogie", cursive;
-$header-font-weight: $global-weight-normal;
+$header-font-family: $body-font-family;
+$display-font-family: "Ruge Boogie", cursive;
+$header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: $red;

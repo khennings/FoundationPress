@@ -55,3 +55,35 @@
 h1, h2, h3 {
 	color: $red;
 }
+
+.cart-image {
+	width: rem-calc(17);
+	height: rem-calc(17);
+	margin: 0 rem-calc(10) 0;
+	display: inline-block;
+}
+
+.cart-icon-wrapper {
+	position: relative;
+}
+
+.cart-contents {
+	padding-left: 1.5rem;
+	background: transparent;
+	position: relative;
+	z-index: 1;
+}
+
+.cart-icon {
+	position: absolute;
+	left: 0;
+	top: 1px;
+	&:before {
+		background-image: url(../images/shopping-cart.svg);
+		content: '';
+		height: rem-calc(17);
+		width: rem-calc(17);
+		background-size: rem-calc(17);
+		display: inline-block;
+	}
+}
