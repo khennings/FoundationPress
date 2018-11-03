@@ -5,13 +5,15 @@ Template Name: Front
 get_header(); ?>
 
 <header id="front-hero" role="banner">
+	<?php the_post_thumbnail('full'); ?>
 	<div class="marketing">
+
 		<div class="tagline">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
-			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>
+			<!-- <a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a> -->
 		</div>
-
+<!-- 
 		<div id="watch">
 			<section id="stargazers">
 				<a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a>
@@ -19,14 +21,14 @@ get_header(); ?>
 			<section id="twitter">
 				<a href="https://twitter.com/olefredrik">@olefredrik</a>
 			</section>
-		</div>
+		</div> -->
 	</div>
 
 </header>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<section class="intro" role="main">
+<main class="intro" id="page" role="main">
 	<div class="fp-intro">
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -52,11 +54,11 @@ get_header(); ?>
 
 	</div>
 
-</section>
+</main>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<div class="section-divider">
+<!-- <div class="section-divider">
 	<hr />
 </div>
 
@@ -97,7 +99,7 @@ get_header(); ?>
 		<a href="/kitchen-sink">See what's in Foundation out of the box →</a>
 	</div>
 
-</section>
+</section> -->
 
 
 

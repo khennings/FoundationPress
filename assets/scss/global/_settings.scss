@@ -109,8 +109,8 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
 $display-font-family: "Ruge Boogie", cursive;
+$header-font-family: $display-font-family;
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -127,14 +127,17 @@ $header-styles: (
     'h6': ('font-size': 26),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
+    'h1': ('font-size': 52),
+    'h2': ('font-size': 48),
     'h3': ('font-size': 31),
     'h4': ('font-size': 25),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
 );
+h3, h4, h5, h6 {
+  font-family: $body-font-family;
+}
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
