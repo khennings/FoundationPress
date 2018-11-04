@@ -10,6 +10,19 @@
 	@include white-back;
 }
 
+// hide the tabs in the product pages
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	display: none;
+}
+
+.woocommerce div.product {
+	padding-top: 3rem;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+	color: $black;
+}
+
 .woocommerce {
 	ul{
 		&.products {
@@ -26,6 +39,10 @@
 					.price {
 						color: $black;
 						font-weight: $global-weight-bold;
+					}
+					.woocommerce-loop-product__title {
+						font-family: $body-font-family;
+						font-size: 1.5rem;
 					}
 				}
 			}

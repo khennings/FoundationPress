@@ -55,40 +55,23 @@
       color: #fff;
     }
 
-    // #stargazers {
-    //   :before {
-    //     content: "\f09b";
-    //     font-family: FontAwesome;
-    //     font-style: normal;
-    //     font-weight: normal;
-    //     text-decoration: inherit;
-    //     color: #B4C9D1;
-    //     margin-right: rem-calc(8);
-    //   }
-    // }
-
-    // #twitter {
-    //   :before {
-    //     content: "\f099";
-    //     font-family: FontAwesome;
-    //     font-style: normal;
-    //     font-weight: normal;
-    //     text-decoration: inherit;
-    //     color: #B4C9D1;
-    //     margin-right: rem-calc(8);
-    //   }
-    // }
 
   }
 
   .tagline {
+    background: rgba(maroon, .8);
     @include breakpoint(small) {
       @include grid-column(8);
+      padding: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
 
     @include breakpoint(medium) {
-      @include grid-column(7);
-      padding-top: 2rem;
+      @include grid-column(6);
+      padding: 3rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 
@@ -103,12 +86,18 @@
     @include breakpoint(medium) {
       font-size: 3.875rem;
     }
+    @include breakpoint(large) {
+      font-size: 4.875rem;
+    }
   }
 
   h4 {
     color: #fefefe;
     font-weight: 300;
     font-size: 1.3125rem;
+    @include breakpoint(large) {
+      font-size: 3.3125rem;
+    }
   }
 
   .download {
@@ -144,68 +133,3 @@
   }
 }
 
-// Section divider
-.section-divider {
-  @include grid-row();
-
-  hr {
-    @include grid-column(12);
-    @extend .dotted;
-    box-sizing: border-box;
-  }
-}
-
-
-// Benefits
-.benefits {
-  @include grid-row();
-  text-align: center;
-
-  header {
-    @include grid-column(12);
-
-    h2 {
-      font-weight: 300;
-    }
-
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #777;
-    }
-  }
-
-  .semantic,
-  .responsive,
-  .customizable,
-  .professional {
-    @include breakpoint(small) {
-      @include grid-column(12);
-    }
-
-    @include breakpoint(medium) {
-      @include grid-column(3);
-    }
-
-    img {
-      padding: 1.25rem;
-      margin: 1rem auto 0 auto;
-    }
-
-    h3 {
-      color: #0a0a0a;
-      font-weight: 300;
-      font-size: 1.75rem;
-    }
-
-    p {
-      font-size: 0.9375rem;
-    }
-  }
-
-  .why-foundation {
-    @include grid-row();
-    @include grid-column(12);
-    margin-top: 4rem;
-  }
-}
