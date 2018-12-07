@@ -54,6 +54,44 @@ require_once( 'library/responsive-images.php' );
 /** Update the cart link in header */
 require_once( 'library/cart-update.php' );
 
+function disable_shipping_calc_on_cart( $show_shipping ) {
+    return false;
+}
+add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_calc_on_cart', 99 );
+
+/**
+ * @snippet       Add privacy policy tick box at checkout
+ * @how-to        Watch tutorial @ https://businessbloomer.com/?p=19055
+ * @sourcecode    https://businessbloomer.com/?p=19854
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 3.3.4
+ */
+ 
+add_action( 'woocommerce_review_order_before_submit', 'bbloomer_add_checkout_shipping_policy', 9 );
+   
+function bbloomer_add_checkout_shipping_policy() {
+  
+woocommerce_form_field( 'shipping_policy', array(
+    'type'          => 'checkbox',
+    'class'         => array('form-row shipping-accept'),
+    'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
+    'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
+    'required'      => true,
+    'label'         => 'I agree to pay additional charges for shipping, typically about $1 per case ordered (some rural areas have additional shipping fees).',
+)); 
+  
+}
+  
+// Show notice if customer does not tick
+   
+add_action( 'woocommerce_checkout_process', 'bbloomer_not_approved_privacy' );
+  
+function bbloomer_not_approved_privacy() {
+    if ( ! (int) isset( $_POST['shipping_policy'] ) ) {
+        wc_add_notice( __( 'Please acknowledge the Shipping Policy' ), 'error' );
+    }
+}
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
 
